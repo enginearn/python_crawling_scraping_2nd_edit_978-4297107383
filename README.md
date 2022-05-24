@@ -1,6 +1,6 @@
 # Python クローリング＆スクレイピング
 
-##　
+##　UNIXコマンドでのスクレイピング
 
 <details>
 <summary>wget</summary>
@@ -304,6 +304,83 @@ KeyError: 'x'
 
 </details>
 
+<details>
+<summary>文字コード</summary>
+
+encode
+
+``` Python 3.10
+>>> "あ".encode("UTF-8") 
+b'\xe3\x81\x82'
+>>> b'\xe3\x81\x82'.decode()   
+'あ'
+>>> "あ".encode("CP932") 
+b'\x82\xa0'
+>>> "あ".encode("euc-jp") 
+b'\xa4\xa2'
+```
+
+decode
+
+``` Python 3.10
+>>> b'\xe3\x81\x82'.decode()   
+'あ'
+```
+
+</details>
+
+<details>
+<summary>re</summary>
+
+search
+
+``` Python 3.10
+>>> re.search(r"a.*c", "abc123DEF")
+<re.Match object; span=(0, 3), match='abc'>
+>>> re.search(r"a.*d", "abc123DEF", re.IGNORECASE) 
+<re.Match object; span=(0, 7), match='abc123D'>
+```
+
+group
+
+``` Python 3.10
+>>> m = re.search(r"a.*c", "abc123DEF")
+>>> m
+<re.Match object; span=(0, 3), match='abc'>
+>>> m.group()
+'abc'
+>>> m.group(0)
+'abc'
+>>> m.group(1) 
+'b'
+```
+
+findall
+
+``` Python 3.10
+>>> re.findall(r"\w{2,}", "This is  a Pen")
+['This', 'is', 'Pen']
+```
+
+sub (substitute)
+
+``` Python 3.10
+>>> re.sub(r"\w{2,}", "That", "This is  a Pen")
+'That That  a That'
+```
+
+search() と match()
+
+``` Python 3.10
+>>> re.search(r"B.*", "ABC")
+<re.Match object; span=(1, 3), match='BC'>
+>>> re.match(r"B.*", "ABC")  
+>>> # Noneが返ってきていてマッチしていない
+>>> re.match(r"A.*", "ABC") 
+<re.Match object; span=(0, 3), match='ABC'>
+```
+</details>
+
 ## Requests
 
 <details>
@@ -397,3 +474,5 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 ```
 
 </details>
+
+## 
