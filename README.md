@@ -475,4 +475,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </details>
 
-## 
+## lxml
+
+<details>
+<summary>基本的な使い方</summary>
+
+``` Python 3.10
+>>> import lxml.html
+>>> tree = lxml.html.parse("dp.html")
+>>> tree
+<lxml.etree._ElementTree object at 0x00000214E1EECAC0>
+>>> type(tree)
+<class 'lxml.etree._ElementTree'>
+>>> html = tree.getroot()
+>>> type(html)
+<class 'lxml.html.HtmlElement'>
+>>> html = lxml.html.fromstring("""   
+... <html>
+... <head><title>八百屋オンライン</title></head>
+... <body>
+...  <h1 id="main"><strong>おいしい</strong>今日のくだもの</h1>
+... <ul>
+...   <li>りんご</li>
+...   <li class="featured">みかん</li>
+...   <li>ぶどう</li>
+... </ul>
+... </body>
+... </html>""")
+>>> type(html)
+<class 'lxml.html.HtmlElement'>
+>>> html.xpath("//li")
+[<Element li at 0x214e23ae340>, <Element li at 0x214e23ae390>, <Element li at 0x214e23ae3e0>]
+>>> html.cssselect("li")
+[<Element li at 0x214e23ae340>, <Element li at 0x214e23ae390>, <Element li at 0x214e23ae3e0>]
+>>> h1.get("id")
+'main'
+>>> h1.attrib
+{'id': 'main'}
+>>> h1.getparent()
+<Element body at 0x214e23ae390>
+>>> strong.text
+'おいしい'
+>>> strong.tail
+'今日のくだもの'
+>>> h1.text_content()
+'おいしい今日のくだもの'
+```
+
+</details>
+
