@@ -524,3 +524,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </details>
 
+## urllib
+
+<details>
+<summary>urljoin</summary>
+
+``` Python 3.10
+>>> from urllib.parse import urljoin
+>>> base_url = "http://example.com/books/top.html"
+>>> urljoin(base_url, "//cdn.example.com/logo.png")        
+'http://cdn.example.com/logo.png'
+>>> urljoin(base_url, "/articles/")
+'http://example.com/articles/'
+>>> urljoin(base_url, "/books/")    
+'http://example.com/books/'
+```
+
+</details>
