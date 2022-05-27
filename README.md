@@ -561,7 +561,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <title>Gihyo Digital Publishing … 技術評論社の電子書籍</title>
 ```
 
-```
+``` Python 3.10
 >>> soup = BeautifulSoup("""      
 ... <html>
 ... ... <head><title>八百屋オンライン</title></head>
