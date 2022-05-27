@@ -541,3 +541,89 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 ```
 
 </details>
+
+## BeatifulSoup4
+
+<details>
+<summary>基本的な使い方</summary>
+
+``` Python 3.10
+>>> from bs4 import BeautifulSoup
+>>> with open("dp.html") as f:
+...     soup = BeautifulSoup(f, "html.parser") 
+... 
+>>> soup
+<!DOCTYPE HTML>
+
+<html class="pc" lang="ja">
+<head>
+<meta charset="utf-8"/>
+<title>Gihyo Digital Publishing … 技術評論社の電子書籍</title>
+```
+
+```
+>>> soup = BeautifulSoup("""      
+... <html>
+... ... <head><title>八百屋オンライン</title></head>
+... ... <body>
+... ...  <h1 id="main"><strong>おいしい</strong>今日のくだもの</h1>
+... ... <ul>
+... ...   <li>りんご</li>
+... ...   <li class="featured">みかん</li>
+... ...   <li>ぶどう</li>
+... ... </ul>
+... ... </body>
+... ... </html>""", "html.parser")
+>>> soup.h1
+<h1 id="main"><strong>おいしい</strong>今日のくだもの</h1>
+>>> soup.title
+<title>八百屋オンライン</title>
+>>> type(soup.title)
+<class 'bs4.element.Tag'>
+>>> soup.title.name
+'title'
+>>> soup.title.string
+'八百屋オンライン'
+>>> type(soup.title.string)
+<class 'bs4.element.NavigableString'>
+>>> soup.h1.string
+>>> soup.h1.contents
+[<strong>おいしい</strong>, '今日のくだもの']
+>>> soup.h1.text
+'おいしい今日のくだもの'
+>>> type(soup.h1.text)
+<class 'str'>
+>>> soup.h1["id"] 
+'main'
+>>> soup.h1.get("id")
+'main'
+>>> soup.h1.attrs
+{'id': 'main'}
+>>> soup.h1.parent
+<body>
+...  <h1 id="main"><strong>おいしい</strong>今日のくだもの</h1>
+... <ul>
+...   <li>りんご</li>
+...   <li class="featured">みかん</li>
+...   <li>ぶどう</li>
+... </ul>
+... </body>
+>>> soup.li
+<li>りんご</li>
+>>> soup.find("li")
+<li>りんご</li>
+>>> soup.find_all("li")
+[<li>りんご</li>, <li class="featured">みかん</li>, <li>ぶどう</li>]
+>>> soup.find_all("li", class_="featured")
+[<li class="featured">みかん</li>]
+>>> soup.find_all(id="main")
+[<h1 id="main"><strong>おいしい</strong>今日のくだもの</h1>]
+>>> soup.select("li")
+[<li>りんご</li>, <li class="featured">みかん</li>, <li>ぶどう</li>]
+>>> soup.select("li.featured")
+[<li class="featured">みかん</li>]
+>>> soup.select("#main") 
+[<h1 id="main"><strong>おいしい</strong>今日のくだもの</h1>]
+```
+
+</details>
