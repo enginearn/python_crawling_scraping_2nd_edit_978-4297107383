@@ -627,3 +627,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 ```
 
 </details>
+
+## pyquery
+
+<details>
+<summary>基本的な使い方</summary>
+
+``` Python 3.10
+>>> from pyquery import PyQuery as pq
+>>> d = pq(filename="index.html")
+>>> d = pq(url="http://example.com/")
+>>> d
+[<html>]
+>>> d = pq("""
+... <html>
+... ... ... <head><title>八百屋オンライン</title></head>
+... ... ... <body>
+... ... ...  <h1 id="main"><strong>おいしい</strong>今日のくだもの</h1>
+... ... ... <ul>
+... ... ...   <li>りんご</li>
+... ... ...   <li class="featured">みかん</li>
+... ... ...   <li>ぶどう</li>
+... ... ... </ul>
+... ... ... </body>
+... ... ... </html>""")
+>>> d("h1")
+[<h1#main>]
+>>> type(d("h1"))
+<class 'pyquery.pyquery.PyQuery'>
+>>> type(d("h1"))
+<class 'pyquery.pyquery.PyQuery'>
+>>> d("h1")
+[<h1#main>]
+>>> d("h1")[0]
+<Element h1 at 0x206302803c0>
+>>> d("h1").text()
+'おいしい今日のくだもの'
+>>> d("h1").attr("id")
+'main'
+>>> d("h1").attr.id   
+'main'
+>>> d("h1").attr["id"]
+'main'
+>>> d("h1").children()
+[<strong>]
+>>> d("h1").parent()  
+[<body>]
+>>> d("li")
+[<li>, <li.featured>, <li>]
+>>> d("li.featured")
+[<li.featured>]
+>>> d("#main")
+[<h1#main>]
+>>> d("body").find("li")
+[<li>, <li.featured>, <li>]
+>>> d("li").filter(".featured")
+[<li.featured>]
+>>> d("li").eq(1)  
+[<li.featured>]
+```
+
+</details>
