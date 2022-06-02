@@ -542,7 +542,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </details>
 
-## BeatifulSoup4
+## BeautifulSoup4
 
 <details>
 <summary>基本的な使い方</summary>
