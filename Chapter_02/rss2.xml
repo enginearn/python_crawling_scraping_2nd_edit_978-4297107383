@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+ <title>gihyo.jp：総合</title>
+ <link>https://gihyo.jp/</link>
+ <description>gihyo.jp（総合）の更新情報をお届けします</description>
+ <language>ja-jp</language>
+ <copyright>技術評論社 2022</copyright>
+ <lastBuildDate>Tue, 31 May 2022 15:22:00 +0900</lastBuildDate>
+ <image>
+  <url>https://gihyo.jp/assets/templates/gihyojp2007/image/header_logo_gihyo.gif</url>
+  <title>gihyo.jp</title>
+  <link>https://gihyo.jp/</link>
+ </image>
+ <item>
+  <title>第40回　Plamo Linux 7.4と赤の女王仮説 ── 続・玩式草子 ―戯れせんとや生まれけん―</title>
+  <link>https://gihyo.jp/lifestyle/serial/01/ganshiki-soushi-2/0040</link>
+  <description>ここ数年，筆者がとりまとめ役をしているPlamo Linuxの新バージョンは田植えで忙しくなる前にリリースすることにしており，今年も先月末に約1年ぶりとなるPlamo Linux 7.4をリリースしました。</description>
+  <pubDate>Tue, 31 May 2022 09:26:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/lifestyle/serial/01/ganshiki-soushi-2">続・玩式草子 ―戯れせんとや生まれけん―</category>
+  <guid>https://gihyo.jp/lifestyle/serial/01/ganshiki-soushi-2/0040</guid> 
+  <author>こじまみつひろ</author>
+ </item>
+ <item>
+  <title>第172回　SYSTEM_USERによるアカウントの保護 ── MySQL道普請便り</title>
+  <link>https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0172</link>
+  <description>MySQLバージョン8.0.16では権限周りの新しい追加要素としてSYSTEM_USER権限が追加されました。</description>
+  <pubDate>Tue, 31 May 2022 09:22:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/dev/serial/01/mysql-road-construction-news">MySQL道普請便り</category>
+  <guid>https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0172</guid> 
+  <author>深町日出海</author>
+ </item>
+ <item>
+  <title>2022年5月27日号　kinetic（22.10）の開発 / ターミナルソフトウェアの変更とPipeWireへの切り替え，Azure Active Directoryへの対応 ── Ubuntu Weekly Topics</title>
+  <link>https://gihyo.jp/admin/clip/01/ubuntu-topics/202205/27</link>
+  <description>kineticの開発では，いくつかの興味深い動きが開始されています。ひとつは，長きに渡って「標準のターミナルソフトウェア」として位置づけられてきた，gnome-terminalからgnome-consoleへの切り替えです。</description>
+  <pubDate>Fri, 27 May 2022 09:54:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/admin/clip/01/ubuntu-topics">Ubuntu Weekly Topics</category>
+  <guid>https://gihyo.jp/admin/clip/01/ubuntu-topics/202205/27</guid> 
+  <author>吉田史</author>
+ </item>
+ <item>
+  <title>10月開催「PyCon JP 2022」スポンサーシップパッケージ内容が事前公開 ── インフォメーション</title>
+  <link>https://gihyo.jp/news/info/2022/05/2601</link>
+  <description>「PyCon JP 2022」のスポンサー募集が5月30日（月）から開始されるのに先駆け，スポンサーシップの詳細をまとめた「スポンサーシップパッケージ資料」が事前公開された。</description>
+  <pubDate>Thu, 26 May 2022 16:31:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/news/info">インフォメーション</category>
+  <guid>https://gihyo.jp/news/info/2022/05/2601</guid> 
+  <author>技術評論社</author>
+ </item>
+ <item>
+  <title>Microsoft，「Build 2022」でAI，クラウド技術を駆使してどこでもすぐに使える開発環境/ツールを発表 ── ニュースリリース</title>
+  <link>https://gihyo.jp/news/nr/2022/05/2601</link>
+  <description>Microsoftは，5/24～26にオンライン開催されている同社の開発者むけ年次イベント「Microsoft Build 2022」にて，50以上の新製品，新機能を発表した。</description>
+  <pubDate>Thu, 26 May 2022 11:15:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/news/nr">ニュースリリース</category>
+  <guid>https://gihyo.jp/news/nr/2022/05/2601</guid> 
+  <author>技術評論社</author>
+ </item>
+ <item>
+  <title>2022年5月第4週　Google I/O 2022で発表されたハードウェアたち② ── Android Weekly Topics</title>
+  <link>https://gihyo.jp/lifestyle/clip/01/awt/202205/26</link>
+  <description>前回に引き続き，Google I/O 2022で発表されたハードウェアを取り上げます。今回は「Pixel Buds Pro」と「Pixel Watch」です。</description>
+  <pubDate>Thu, 26 May 2022 09:22:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/lifestyle/clip/01/awt">Android Weekly Topics</category>
+  <guid>https://gihyo.jp/lifestyle/clip/01/awt/202205/26</guid> 
+  <author>傍島康雄</author>
+ </item>
+ <item>
+  <title>2022年5月第4週号 1位は，顧客にやさしいWebデザインの15の原則，気になるネタは，「SUZURI」でNFTコンテンツのグッズ販売可能に MetaMaskと連携 ── 週刊Webテク通信</title>
+  <link>https://gihyo.jp/design/clip/01/weekly-web-tech/202205/26</link>
+  <description>ネットで見かけたWebテク（Webテクニック・Webテクノロジー）記事から，Webデザイナーの目で厳選したネタを週刊で紹介するこのコーナー。今回は，2022年5月16日～5月24日の間に見つけた記事のベスト5です。</description>
+  <pubDate>Thu, 26 May 2022 09:15:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/design/clip/01/weekly-web-tech">週刊Webテク通信</category>
+  <guid>https://gihyo.jp/design/clip/01/weekly-web-tech/202205/26</guid> 
+  <author>アシカガコウジ</author>
+ </item>
+ <item>
+  <title>第716回　Ubuntuにおけるマイクやスピーカーの切り替えを，システムメニューを使って手早く切り替える ── Ubuntu Weekly Recipe</title>
+  <link>https://gihyo.jp/admin/serial/01/ubuntu-recipe/0716</link>
+  <description>オーディオデバイスは勝手に増殖します。今回は聖徳太子になりきれない読者に向けて、複数のオーディオデバイスを活用できるよう，より手早くデバイスを切り替える方法を紹介します。
+</description>
+  <pubDate>Wed, 25 May 2022 09:38:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/admin/serial/01/ubuntu-recipe">Ubuntu Weekly Recipe</category>
+  <guid>https://gihyo.jp/admin/serial/01/ubuntu-recipe/0716</guid> 
+  <author>柴田充也</author>
+ </item>
+ <item>
+  <title>Pythonを使って微分積分を理解する！ ── 新刊ピックアップ</title>
+  <link>https://gihyo.jp/book/pickup/2022/0030</link>
+  <description>近年注目を浴びる人工知能は微分をはじめとした数学の計算に基づいています。また、新型コロナウィルス感染の予測では微分方程式が利用されています。微分積分は、多くの方が学ぶ意義がある学問なのですが、複雑な計算や数式が原因で学習に挫折した方も少なくありません。そこでPythonの出番です。</description>
+  <pubDate>Wed, 25 May 2022 09:17:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/book/pickup">新刊ピックアップ</category>
+  <guid>https://gihyo.jp/book/pickup/2022/0030</guid> 
+  <author>辻真吾</author>
+ </item>
+ <item>
+  <title>悪いコードの正体を知り，良いコードを書けるようになろう ── 新刊ピックアップ</title>
+  <link>https://gihyo.jp/book/pickup/2022/0031</link>
+  <description>本書は、より成長させやすいコードの書き方と設計を学ぶ入門書です。</description>
+  <pubDate>Wed, 25 May 2022 09:17:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/book/pickup">新刊ピックアップ</category>
+  <guid>https://gihyo.jp/book/pickup/2022/0031</guid> 
+  <author>編集部</author>
+ </item>
+ <item>
+  <title>2022年5月25日　Linux 5.18リリース，カーネル開発をC11に移行 ── Linux Daily Topics</title>
+  <link>https://gihyo.jp/admin/clip/01/linux_dt/202205/25</link>
+  <description>Linus Torvaldsは5月22日，「Linux 5.18」の正式リリースを公開した。</description>
+  <pubDate>Wed, 25 May 2022 09:11:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/admin/clip/01/linux_dt">Linux Daily Topics</category>
+  <guid>https://gihyo.jp/admin/clip/01/linux_dt/202205/25</guid> 
+  <author>階戸アキラ</author>
+ </item>
+ <item>
+  <title>1年ぶりのメジャーバージョンアップ GitLab 15.0がリリース ── ニュースリリース</title>
+  <link>https://gihyo.jp/news/nr/2022/05/2401</link>
+  <description>GitLab Inc.は5月22日，同社が開発するGitリポジトリマネージャGitLabの最新バージョン15.0をリリースした。</description>
+  <pubDate>Tue, 24 May 2022 16:51:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/news/nr">ニュースリリース</category>
+  <guid>https://gihyo.jp/news/nr/2022/05/2401</guid> 
+  <author>技術評論社</author>
+ </item>
+ <item>
+  <title>パズルのアルゴリズムを考えてみよう ── 新刊ピックアップ</title>
+  <link>https://gihyo.jp/book/pickup/2022/0028</link>
+  <description>本書では、「テンパズル」「数独」「4×4オセロ」といったさまざまなパズルのソルバーを実装することで、楽しく効率的にアルゴリズムの設計力が磨けます。各アルゴリズムの概要は、図解でしっかり解説。数学的解法といった発展的な内容も盛り込みました。競技プログラミングに挑戦したい方の第一歩としてもお勧めの1冊です。</description>
+  <pubDate>Tue, 24 May 2022 09:25:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/book/pickup">新刊ピックアップ</category>
+  <guid>https://gihyo.jp/book/pickup/2022/0028</guid> 
+  <author>編集部</author>
+ </item>
+ <item>
+  <title>すぐわかる！ ディープラーニング＆AIの重要用語 ── 新刊ピックアップ</title>
+  <link>https://gihyo.jp/book/pickup/2022/0029</link>
+  <description>初学者の方々に向けた，ディープラーニングの技術解説書。</description>
+  <pubDate>Tue, 24 May 2022 09:25:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/book/pickup">新刊ピックアップ</category>
+  <guid>https://gihyo.jp/book/pickup/2022/0029</guid> 
+  <author>編集部</author>
+ </item>
+ <item>
+  <title>IoTカメラの進化は新たなフェーズへ! ソラコム，ATOM Cam2をベースにしたクラウドカメラサービス「ソラカメ」をローンチ ── レポート</title>
+  <link>https://gihyo.jp/news/report/2022/05/2401</link>
+  <description>ソラコムは5月18日，クラウドカメラサービス「ソラカメ」のローンチを発表しました。</description>
+  <pubDate>Tue, 24 May 2022 09:15:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/news/report">レポート</category>
+  <guid>https://gihyo.jp/news/report/2022/05/2401</guid> 
+  <author>五味明子</author>
+ </item>
+ <item>
+  <title>「Python Boot Camp」2022年7月9日に広島市で開催 ── インフォメーション</title>
+  <link>https://gihyo.jp/news/info/2022/05/2301</link>
+  <description>Python Boot Campは，一般社団法人PyCon JP Associationが主催するPythonを学べるチュートリアル講座。</description>
+  <pubDate>Mon, 23 May 2022 14:19:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/news/info">インフォメーション</category>
+  <guid>https://gihyo.jp/news/info/2022/05/2301</guid> 
+  <author>技術評論社</author>
+ </item>
+ <item>
+  <title>実際に小一時間でゲームをつくってみた！^^ ── 新刊ピックアップ</title>
+  <link>https://gihyo.jp/book/pickup/2022/0027</link>
+  <description>C言語によるコンソールアプリで、ゲームを一手ずつ作成する手順を解説する、画期的な本の登場です。0から完成まで、手順通りに進めれば必ず完成する仕組みになっています。最小限の手順ごとに動作確認を行うので、それぞれの処理の意味を実感しながら、少しずつできあがっていく過程を楽しめます。</description>
+  <pubDate>Mon, 23 May 2022 09:28:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/book/pickup">新刊ピックアップ</category>
+  <guid>https://gihyo.jp/book/pickup/2022/0027</guid> 
+  <author>編集部</author>
+ </item>
+ <item>
+  <title>ネットワーク技術やその仕組みを理解するための最短コースとは？ ── 新刊ピックアップ</title>
+  <link>https://gihyo.jp/book/pickup/2022/0026</link>
+  <description>ネットワークのしくみや技術を理解するには、技術用語を暗記するだけではなかなか身につかないものです。そこで、本書では仮想環境でネットワークを段階的に構築しながら学べるように構成し、技術解説に合わせた多くの演習課題を用意しました。</description>
+  <pubDate>Mon, 23 May 2022 09:28:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/book/pickup">新刊ピックアップ</category>
+  <guid>https://gihyo.jp/book/pickup/2022/0026</guid> 
+  <author>編集部</author>
+ </item>
+ <item>
+  <title>2022年5月22日　ねこーず ── 帰ってきた『技評ねこ部通信』</title>
+  <link>https://gihyo.jp/lifestyle/clip/01/monthly-cat/202205/0522</link>
+  <description>ねこは群れずに単独行動を取る動物と言われていますが，ごはんに困らない環境だと複数で行動を取ったりもするそうです。</description>
+  <pubDate>Fri, 20 May 2022 15:00:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/lifestyle/clip/01/monthly-cat">帰ってきた『技評ねこ部通信』</category>
+  <guid>https://gihyo.jp/lifestyle/clip/01/monthly-cat/202205/0522</guid> 
+  <author></author>
+ </item>
+ <item>
+  <title>2022年5月20日号　「kinetic（22.10）の開発/isc-dhcpの除去，Ubuntu Core 22のリリースの準備 ── Ubuntu Weekly Topics</title>
+  <link>https://gihyo.jp/admin/clip/01/ubuntu-topics/202205/20</link>
+  <description>kinetic（22.10）の開発は，初期に特有の「そもそもこれを除外したりできないかな」というタイプの議論が継続して行われています。</description>
+  <pubDate>Fri, 20 May 2022 09:58:00 +0900</pubDate>
+  <category domain="https://gihyo.jp/admin/clip/01/ubuntu-topics">Ubuntu Weekly Topics</category>
+  <guid>https://gihyo.jp/admin/clip/01/ubuntu-topics/202205/20</guid> 
+  <author>吉田史</author>
+ </item>
+</channel>
+</rss>
