@@ -524,6 +524,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </details>
 
+<details>
+<summary>lxml.etree</summary>
+
+``` Python 3.10
+>>> import lxml.etree
+>>> import requests
+>>> url = "https://gihyo.jp/feed/atom"
+>>> src = requests.get(url)
+>>> tree = lxml.etree.parse(src.text)
+
+```
+
+</details>
+
 ## urllib
 
 <details>
@@ -685,6 +699,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 [<li.featured>]
 >>> d("li").eq(1)  
 [<li.featured>]
+```
+
+</details>
+
+## RSS feedparser
+
+<details>
+<summary>基本的な使い方</summary>
+
+``` Python 3.10
+>>> import feedparser
+>>> d = feedparser.parse("http://b.hatena.ne.jp/hotentry/it.rss")
+>>> d = feedparser.parse("it.rss")
+>>> type(d)
+<class 'feedparser.util.FeedParserDict'>
+>>> d.version
+'rss10'
+>>> d.feed.title
+'はてなブックマーク - 人気エントリー - テクノロジー'
+>>> d["feed"]["title"]
+'はてなブックマーク - 人気エントリー - テクノロジー'
+>>> d.feed.link
+'https://b.hatena.ne.jp/hotentry/it'
+>>> d.feed.description
+'最近の人気エントリー'
+>>> len(d.entries)
+30
+>>> d.entries[0].title
+'Dockerのことが多分わかるハンズオン'
+>>> d.entries[0].link 
+'https://speakerdeck.com/yoshi0202/dockerfalsekotogaduo-fen-wakaruhanzuon'
+>>> d.entries[0].description
+'Transcript Dockerのことが 多分わかるハンズオン Yoshiki Kobayashi 2020/06/28 Hello World!! 自称なんでも屋。好きなAWSのサービスはLambda。 好きな言語はJavaScriptとRuby。Nintendo Switch難民。 最近転職しました。 Name : Yoshiki Kobayashi @yoshi0202 @codeplumdev https://code-plum.dev モダンな技術って 憧...'
+>>> d.entries[0].updated    
+'2022-06-04T03:06:37Z'
+>>> d.entries[0].updated_parsed
+time.struct_time(tm_year=2022, tm_mon=6, tm_mday=4, tm_hour=3, tm_min=6, tm_sec=37, tm_wday=5, tm_yday=155, tm_isdst=0)
 ```
 
 </details>
