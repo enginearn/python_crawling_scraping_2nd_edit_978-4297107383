@@ -1,6 +1,6 @@
 # Python クローリング＆スクレイピング
 
-##　UNIXコマンドでのスクレイピング
+## UNIXコマンドでのスクレイピング
 
 <details>
 <summary>wget</summary>
