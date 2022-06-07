@@ -192,11 +192,11 @@ abc
 ``` Python 3.10
 >>> "ABCあいうえお".encode("utf-8")
 b'ABC\xe3\x81\x82\xe3\x81\x84\xe3\x81\x86\xe3\x81\x88\xe3\x81\x8a'
->>> type(b'ABC\xe3\x81\x82\xe3\x81\x84\xe3\x81\x86\xe3\x81\x88\xe3\x81\x8a') 
+>>> type(b'ABC\xe3\x81\x82\xe3\x81\x84\xe3\x81\x86\xe3\x81\x88\xe3\x81\x8a')
 <class 'bytes'>
 >>> b'ABC\xe3\x81\x82\xe3\x81\x84\xe3\x81\x86\xe3\x81\x88\xe3\x81\x8a'.decode("utf-8")
 'ABCあいうえお'
->>> "\n ABC あいう \n".strip()           
+>>> "\n ABC あいう \n".strip()
 'ABC あいう'
 ```
 
@@ -208,13 +208,13 @@ b'ABC\xe3\x81\x82\xe3\x81\x84\xe3\x81\x86\xe3\x81\x88\xe3\x81\x8a'
 ``` Python 3.10
 >>> type([])
 <class 'list'>
->>> [1, 2, 3] 
+>>> [1, 2, 3]
 [1, 2, 3]
->>> [1, 2, 3,] 
+>>> [1, 2, 3,]
 [1, 2, 3]
 >>> [1, 2, "Three"]
 [1, 2, 'Three']
->>> [1, 2, 3][0]    
+>>> [1, 2, 3][0]
 1
 >>> [1, 2, 3][1:2]
 [2]
@@ -243,7 +243,7 @@ True
 >>> a[0] = 1
 >>> a
 [1, 3, 4]
->>> "a,b,c".split(",")   
+>>> "a,b,c".split(",")
 ['a', 'b', 'c']
 >>> ",".join(["a", "b", "c"])
 'a,b,c'
@@ -259,7 +259,7 @@ True
 <class 'tuple'>
 >>> (1, 2)
 (1, 2)
->>> (1, 2,) 
+>>> (1, 2,)
 (1, 2)
 >>> (1,)
 (1,)
@@ -310,20 +310,20 @@ KeyError: 'x'
 encode
 
 ``` Python 3.10
->>> "あ".encode("UTF-8") 
+>>> "あ".encode("UTF-8")
 b'\xe3\x81\x82'
->>> b'\xe3\x81\x82'.decode()   
+>>> b'\xe3\x81\x82'.decode()
 'あ'
->>> "あ".encode("CP932") 
+>>> "あ".encode("CP932")
 b'\x82\xa0'
->>> "あ".encode("euc-jp") 
+>>> "あ".encode("euc-jp")
 b'\xa4\xa2'
 ```
 
 decode
 
 ``` Python 3.10
->>> b'\xe3\x81\x82'.decode()   
+>>> b'\xe3\x81\x82'.decode()
 'あ'
 ```
 
@@ -337,7 +337,7 @@ search
 ``` Python 3.10
 >>> re.search(r"a.*c", "abc123DEF")
 <re.Match object; span=(0, 3), match='abc'>
->>> re.search(r"a.*d", "abc123DEF", re.IGNORECASE) 
+>>> re.search(r"a.*d", "abc123DEF", re.IGNORECASE)
 <re.Match object; span=(0, 7), match='abc123D'>
 ```
 
@@ -351,7 +351,7 @@ group
 'abc'
 >>> m.group(0)
 'abc'
->>> m.group(1) 
+>>> m.group(1)
 'b'
 ```
 
@@ -374,9 +374,9 @@ search() と match()
 ``` Python 3.10
 >>> re.search(r"B.*", "ABC")
 <re.Match object; span=(1, 3), match='BC'>
->>> re.match(r"B.*", "ABC")  
+>>> re.match(r"B.*", "ABC")
 >>> # Noneが返ってきていてマッチしていない
->>> re.match(r"A.*", "ABC") 
+>>> re.match(r"A.*", "ABC")
 <re.Match object; span=(0, 3), match='ABC'>
 ```
 </details>
@@ -386,7 +386,7 @@ search() と match()
 <details>
 <summary>基本的な使い方</summary>
 
-``` 
+``` Python 3.10
 >>> import requests
 >>> r = requests.get("https://gihyo.jp/dp")
 >>> type(r)
@@ -455,21 +455,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 ``` Python 3.10
 >>> r = requests.post("http://httpbin.org/post", data={"key1": "value"})
->>> r = requests.get("http://httpbin.org/get", headers={"user-agent": "my-crawler/1.0(+foo@example.com)"}) 
+>>> r = requests.get("http://httpbin.org/get", headers={"user-agent": "my-crawler/1.0(+foo@example.com)"})
 >>> r
 <Response [200]>
 >>> r.headers
 {'Date': 'Tue, 24 May 2022 01:44:05 GMT', 'Content-Type': 'application/json', 'Content-Length': '317', 'Connection': 'keep-alive', 'Server': 'gunicorn/19.9.0', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Credentials': 'true'}
->>> r = requests.get("https://api.github.com/user", auth=("github account", "github passwd")) 
+>>> r = requests.get("https://api.github.com/user", auth=("github account", "github passwd"))
 >>> r
 <Response [401]>
->>> r = requests.get("http://httpbin.org/get", params={"key": "value1"}) 
+>>> r = requests.get("http://httpbin.org/get", params={"key": "value1"})
 ```
 
 ``` Python 3.10
 >>> s = requests.Session()
 >>> s.headers.update({"user-agent": "my-crawler/1.0(+foo@example.com)"})
->>> r = s.get("https://gihyo.jp/")   
+>>> r = s.get("https://gihyo.jp/")
 >>> r = s.get("https://gihyo.jp/dp")
 ```
 
@@ -490,7 +490,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 >>> html = tree.getroot()
 >>> type(html)
 <class 'lxml.html.HtmlElement'>
->>> html = lxml.html.fromstring("""   
+>>> html = lxml.html.fromstring("""
 ... <html>
 ... <head><title>八百屋オンライン</title></head>
 ... <body>
@@ -546,12 +546,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 ``` Python 3.10
 >>> from urllib.parse import urljoin
 >>> base_url = "http://example.com/books/top.html"
->>> urljoin(base_url, "//cdn.example.com/logo.png")        
+>>> urljoin(base_url, "//cdn.example.com/logo.png")
 'http://cdn.example.com/logo.png'
 >>> urljoin(base_url, "/articles/")
 'http://example.com/articles/'
->>> urljoin(base_url, "/books/")    
+>>> urljoin(base_url, "/books/")
 'http://example.com/books/'
+```
+
+</details>
+
+<details>
+<summary>robotparser</summary>
+
+``` Python 3.10
+>>> import urllib.robotparser
+>>> rp = urllib.robotparser.RobotFileParser()
+>>> rp.set_url("https://www.python.org/robots.txt")
+>>> rp.read()
+>>> rp.can_fetch("mybot", "https://www.python.org/")
+True
 ```
 
 </details>
@@ -564,8 +578,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 ``` Python 3.10
 >>> from bs4 import BeautifulSoup
 >>> with open("dp.html") as f:
-...     soup = BeautifulSoup(f, "html.parser") 
-... 
+...     soup = BeautifulSoup(f, "html.parser")
+...
 >>> soup
 <!DOCTYPE HTML>
 
@@ -576,7 +590,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 ```
 
 ``` Python 3.10
->>> soup = BeautifulSoup("""      
+>>> soup = BeautifulSoup("""
 ... <html>
 ... ... <head><title>八百屋オンライン</title></head>
 ... ... <body>
@@ -636,7 +650,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 [<li>りんご</li>, <li class="featured">みかん</li>, <li>ぶどう</li>]
 >>> soup.select("li.featured")
 [<li class="featured">みかん</li>]
->>> soup.select("#main") 
+>>> soup.select("#main")
 [<h1 id="main"><strong>おいしい</strong>今日のくだもの</h1>]
 ```
 
@@ -655,16 +669,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 [<html>]
 >>> d = pq("""
 ... <html>
-... ... ... <head><title>八百屋オンライン</title></head>
-... ... ... <body>
-... ... ...  <h1 id="main"><strong>おいしい</strong>今日のくだもの</h1>
+... ... <head><title>八百屋オンライン</title></head>
+... ...   <body>
+... ... ... <h1 id="main"><strong>おいしい</strong>今日のくだもの</h1>
 ... ... ... <ul>
 ... ... ...   <li>りんご</li>
 ... ... ...   <li class="featured">みかん</li>
 ... ... ...   <li>ぶどう</li>
 ... ... ... </ul>
-... ... ... </body>
-... ... ... </html>""")
+... ... ..</body>
+... </html>""")
 >>> d("h1")
 [<h1#main>]
 >>> type(d("h1"))
@@ -679,13 +693,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'おいしい今日のくだもの'
 >>> d("h1").attr("id")
 'main'
->>> d("h1").attr.id   
+>>> d("h1").attr.id
 'main'
 >>> d("h1").attr["id"]
 'main'
 >>> d("h1").children()
 [<strong>]
->>> d("h1").parent()  
+>>> d("h1").parent()
 [<body>]
 >>> d("li")
 [<li>, <li.featured>, <li>]
@@ -697,7 +711,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 [<li>, <li.featured>, <li>]
 >>> d("li").filter(".featured")
 [<li.featured>]
->>> d("li").eq(1)  
+>>> d("li").eq(1)
 [<li.featured>]
 ```
 
@@ -728,14 +742,82 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 30
 >>> d.entries[0].title
 'Dockerのことが多分わかるハンズオン'
->>> d.entries[0].link 
+>>> d.entries[0].link
 'https://speakerdeck.com/yoshi0202/dockerfalsekotogaduo-fen-wakaruhanzuon'
 >>> d.entries[0].description
 'Transcript Dockerのことが 多分わかるハンズオン Yoshiki Kobayashi 2020/06/28 Hello World!! 自称なんでも屋。好きなAWSのサービスはLambda。 好きな言語はJavaScriptとRuby。Nintendo Switch難民。 最近転職しました。 Name : Yoshiki Kobayashi @yoshi0202 @codeplumdev https://code-plum.dev モダンな技術って 憧...'
->>> d.entries[0].updated    
+>>> d.entries[0].updated
 '2022-06-04T03:06:37Z'
 >>> d.entries[0].updated_parsed
 time.struct_time(tm_year=2022, tm_mon=6, tm_mday=4, tm_hour=3, tm_min=6, tm_sec=37, tm_wday=5, tm_yday=155, tm_isdst=0)
+```
+
+</details>
+
+## MySQL
+
+<details>
+<summary>CREATE DB</summary>
+
+``` MySQL 8
+mysql> create database scraping default character set utf8mb4;
+Query OK, 1 row affected (0.06 sec)
+```
+
+</details>
+
+<details>
+<summary>CREATE USER</summary></summary>
+
+``` MySQL 8
+mysql> create user "scraper"@"%" identified by "password";　# どこからでもアクセスOK %はwildcard
+Query OK, 0 rows affected (0.09 sec)
+```
+
+</details>
+
+<details>
+<summary>GRANT</summary>
+
+``` MySQL 8
+mysql> grant all on scraping.* to "scraper"@"%";
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+```
+
+</details>
+
+## Mongo DB
+
+<details>
+<summary>基本的な使い方</summary>
+
+``` Python 3.10
+>>> from pymongo import MongoClient
+>>> client = MongoClient("localhost", 27017)
+>>> db = client.test
+>>> db = client["test"]
+>>> collection = db.spots
+>>> collection = db["spots"]
+>>> collection.insert_one({"name": "東京スカイツリー", "prefecture": "東京"})
+<pymongo.results.InsertOneResult object at 0x000001B2BF877460>
+>>> collection.insert_many([{"name": "東京ディズニーランド", "prefecture": "千葉"}, {"name": "東京ドーム", "prefecture": "東京"}])
+<pymongo.results.InsertManyResult object at 0x000001B2BF877280>
+>>> for spot in collection.find():
+...     print(spot)
+...
+{'_id': ObjectId('629d4c8a7c4bd6e36e49f193'), 'name': '東京スカイツリー', 'prefecture': '東京'}
+{'_id': ObjectId('629d4d657c4bd6e36e49f194'), 'name': '東京ディズニーランド'}
+{'_id': ObjectId('629d4d657c4bd6e36e49f195'), 'name': '東京ドーム', 'prefecture': '東京'}
+>>> collection.find_one()
+{'_id': ObjectId('629d4c8a7c4bd6e36e49f193'), 'name': '東京スカイツリー', 'prefecture': '東京'}
+>>> collection.find_one({"prefecture": "千葉"})
+{'_id': ObjectId('629d4e4d7c4bd6e36e49f196'), 'name': '東京ディズニーランド', 'prefecture': '千葉'}
+>>> for spot in collection.find():
+...     print(spot)
+...
+{'_id': ObjectId('629d4c8a7c4bd6e36e49f193'), 'name': '東京スカイツリー', 'prefecture': '東京'}
+{'_id': ObjectId('629d4e4d7c4bd6e36e49f196'), 'name': '東京ディズニーランド', 'prefecture': '千葉'}
+{'_id': ObjectId('629d4d657c4bd6e36e49f195'), 'name': '東京ドーム', 'prefecture': '東京'}
 ```
 
 </details>
