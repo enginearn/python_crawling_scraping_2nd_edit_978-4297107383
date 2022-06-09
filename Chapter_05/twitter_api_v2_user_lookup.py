@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import json
 
 load_dotenv(".env")
-BEARER_TOKEN = os.environ.get("BEARER_TOKEN")
+BEARER_TOKEN = os.environ.get("TWITTER_BEARER_TOKEN")
 
 user = "enginyaaaaan"
 
