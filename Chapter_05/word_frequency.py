@@ -37,7 +37,7 @@ def main():
     """コマンドライン引数で指定したディレクトリ内の
     ファイルを読み込んで非出単語を表示する
     """
-    input_dir = sys.argv[1]
+    input_dir = sys.argv[1] # python .\word_frequency.py .\articles\
 
     tagger = MeCab.Tagger("")
     tagger.parse("")
