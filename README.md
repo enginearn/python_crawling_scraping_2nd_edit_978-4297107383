@@ -412,7 +412,7 @@ search() と match()
 200
 >>> r.json()
 Traceback (most recent call last):
-  File "C:\Users\nagar\Development\Python\crawling_scraping_2nd_edit\venv\lib\site-packages\requests\models.py", line 910, in json
+  File "C:\Users\path	o\Development\Python\crawling_scraping_2nd_edit\venv\lib\site-packages\requests\models.py", line 910, in json
     return complexjson.loads(self.text, **kwargs)
   File "C:\Python310\lib\json\__init__.py", line 346, in loads
     return _default_decoder.decode(s)
@@ -426,7 +426,7 @@ During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "C:\Users\nagar\Development\Python\crawling_scraping_2nd_edit\venv\lib\site-packages\requests\models.py", line 917, in json
+  File "C:\Users\path	o\Development\Python\crawling_scraping_2nd_edit\venv\lib\site-packages\requests\models.py", line 917, in json
     raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
 requests.exceptions.JSONDecodeError: [Errno Expecting value]
 <!DOCTYPE html>
@@ -820,4 +820,179 @@ Query OK, 0 rows affected, 1 warning (0.02 sec)
 {'_id': ObjectId('629d4d657c4bd6e36e49f195'), 'name': '東京ドーム', 'prefecture': '東京'}
 ```
 
+</details>
+
+## Pandas
+
+<details>
+<summary>基本的な使い方</summary>
+
+`Series`は1次元のラベル付き配列。
+
+``` Python 3.10
+
+``` Python 3.10
+Python 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pandas as pd
+>>> s1 = pd.Series([4, -2, 5])
+>>> s1
+0    4
+1   -2
+2    5
+dtype: int64
+>>> s1.index
+RangeIndex(start=0, stop=3, step=1)
+>>> list(s1.index)
+[0, 1, 2]
+>>> s1.values
+array([ 4, -2,  5], dtype=int64)
+>>> list(s1.values)
+[4, -2, 5]
+>>> s2 = pd.Series([4, -2, 5], index=["a", "b", "c"])
+>>> s2
+a    4
+b   -2
+c    5
+dtype: int64
+>>> s2.index
+Index(['a', 'b', 'c'], dtype='object')
+>>> s2['a']
+4
+>>> s2.a
+4
+>>> s2['c'] = 2
+>>> s2
+a    4
+b   -2
+c    2
+dtype: int64
+```
+
+`DataFrame`は2次元の表形式の配列。
+
+``` Python 3.10
+>>> df = pd.DataFrame({'math': [78, 64, 53], 'english': [45, 87, 67]}, index=['001', '002', '003'], columns=['math', 'english'])
+>>> df
+     math  english
+001    78       45
+002    64       87
+003    53       67
+>>> df['math']        
+001    78
+002    64
+003    53
+Name: math, dtype: int64
+>>> df.english    
+001    45
+002    87
+003    67
+Name: english, dtype: int64
+>>> df.loc['001']
+math       78
+english    45
+Name: 001, dtype: int64
+>>> df.iloc[0]    
+math       78
+english    45
+Name: 001, dtype: int64
+>>> df.english['001']
+45
+>>> df.describe()
+            math    english
+count   3.000000   3.000000
+mean   65.000000  66.333333
+std    12.529964  21.007935
+min    53.000000  45.000000
+25%    58.500000  56.000000
+50%    64.000000  67.000000
+75%    71.000000  77.000000
+max    78.000000  87.000000
+>>> df.to_csv('score.csv')
+```
+
+`read_csv`
+
+``` Python 3.10
+>>> pd.read_csv('exchange.csv', encoding='CP932')
+      データコード               FM08'FXERM07 FM09'FX180110002
+0       系列名称  東京市場　ドル・円　スポット　17時時点/月中平均      実質実効為替レート指数
+1    1970/01                        NaN            58.32
+2    1970/02                        NaN            57.98
+3    1970/03                        NaN            58.19
+4    1970/04                        NaN            58.25
+..       ...                        ...              ...
+632  2022/08                        NaN              NaN
+633  2022/09                        NaN              NaN
+634  2022/10                        NaN              NaN
+635  2022/11                        NaN              NaN
+636  2022/12                        NaN              NaN
+
+[637 rows x 3 columns]
+>>> df_exchange = pd.read_csv('exchange.csv', encoding='CP932', header=1, names=['data', 'USD', 'rate'], index_col=0, parse_dates=True)
+>>> df_exchange
+            USD   rate
+data
+1970-01-01  NaN  58.32
+1970-02-01  NaN  57.98
+1970-03-01  NaN  58.19
+1970-04-01  NaN  58.25
+1970-05-01  NaN  57.85
+...         ...    ...
+2022-08-01  NaN    NaN
+2022-09-01  NaN    NaN
+2022-10-01  NaN    NaN
+2022-11-01  NaN    NaN
+2022-12-01  NaN    NaN
+
+[636 rows x 2 columns]
+```
+
+``` Python 3.10
+>>> df_exchange.rate[0]
+58.32
+>>> type(df_exchange.rate[0]) 
+<class 'numpy.float64'>
+```
+
+元号を西暦へ変換する関数
+
+``` Python 3.10
+
+``` Python 3.10
+>>> from datetime import datetime
+>>> def parse_japanese_date(s):
+...     base_years = {'E': 1596, 'M': 1868, 'T': 1912, 'S': 1925, 'H': 1988, 'R': 2018}
+...     era = s[0]
+...     year, month, day = s[1:].split('.') 
+...     year = base_years[era] + int(year)
+...     return datetime(year, int(month), int(day))
+... 
+>>> parse_japanese_date('S49.9.24')
+datetime.datetime(1974, 9, 24, 0, 0)
+>>> parse_japanese_date('E49.9.24')
+datetime.datetime(1645, 9, 24, 0, 0)
+>>> parse_japanese_date('R20.9.24') 
+datetime.datetime(2038, 9, 24, 0, 0)
+```
+
+``` Python 3.10
+>>> df_jgbcm = pd.read_csv('jgbcm_all.csv', encoding='CP932', header=1, index_col=0, parse_dates=True, date_parser=parse_japanese_date, na_values=['-']) 
+>>> df_jgbcm
+                1年     2年     3年     4年     5年     6年     7年     8年     9年    10年    15年    20年    25年    30年    40年
+基準日
+1974-09-24  10.327  9.362  8.830  8.515  8.348  8.290  8.240  8.121  8.127    NaN    NaN    NaN    NaN    NaN    NaN
+1974-09-25  10.333  9.364  8.831  8.516  8.348  8.290  8.240  8.121  8.127    NaN    NaN    NaN    NaN    NaN    NaN
+1974-09-26  10.340  9.366  8.832  8.516  8.348  8.290  8.240  8.122  8.128    NaN    NaN    NaN    NaN    NaN    NaN
+1974-09-27  10.347  9.367  8.833  8.517  8.349  8.290  8.240  8.122  8.128    NaN    NaN    NaN    NaN    NaN    NaN
+1974-09-28  10.354  9.369  8.834  8.518  8.349  8.291  8.240  8.122  8.129    NaN    NaN    NaN    NaN    NaN    NaN
+...            ...    ...    ...    ...    ...    ...    ...    ...    ...    ...    ...    ...    ...    ...    ...
+2022-06-24  -0.133 -0.079 -0.047 -0.017  0.049  0.106  0.157  0.220  0.244  0.240  0.634  0.897  1.099  1.211  1.284
+2022-06-27  -0.115 -0.066 -0.037 -0.007  0.061  0.121  0.176  0.240  0.258  0.252  0.659  0.922  1.130  1.250  1.320
+2022-06-28  -0.114 -0.045 -0.027  0.003  0.068  0.126  0.182  0.245  0.263  0.252  0.664  0.929  1.135  1.257  1.337
+2022-06-29  -0.114 -0.050 -0.034 -0.002  0.056  0.116  0.167  0.230  0.254  0.246  0.650  0.911  1.118  1.240  1.325
+2022-06-30  -0.105 -0.065 -0.057 -0.022  0.042  0.107  0.167  0.235  0.253  0.242  0.634  0.891  1.083  1.213  1.294
+
+[12271 rows x 15 columns]
+```
 </details>
