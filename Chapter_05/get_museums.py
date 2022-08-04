@@ -7,15 +7,14 @@ sparql.setQuery(
 PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
 PREFIX owl: <http://dbpedia.org/ontology/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX prop-ja: <http://ja.dbpedia.org/property/>
 
 select * where {
-  ?link a owl:Museum ;
-  rdfs:label ?title ;
-  prop-ja:所在地 ?address .
-  geo:lat ?lat ,
-  geo:long ?long ;
-FILTER REGEX(?address, '^\\p{Han}{2,3}[都道府県]')
+  ?link a owl:Museum;
+  rdfs:label ?title;
+  prop-ja:所在地 ?address;
+  geo:lat ?lat;
+  geo:long ?long .
+FILTER REGEX(?address, "^\\p{Han}{2,3}[都道府県]")
 } ORDER BY ?title;
 """
 )
